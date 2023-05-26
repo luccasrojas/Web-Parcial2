@@ -1,0 +1,47 @@
+.cafeCardDetail
+{
+    align-items: center;
+    width: 25rem;
+    border: 0.1rem solid black;
+    height: 20rem;
+    background-color:  #E0BBBB;
+    margin-top: 0.2rem;
+    margin-left: 3rem;
+}
+
+.cafeImage
+{
+    display: flex;
+    margin-left: auto;
+    margin-right: 7.5rem;
+    width: 10rem;
+    height: 10rem;
+    padding-bottom: 1rem;
+}
+.nombreCafe
+{
+    font-family: 'Inter';
+    text-align: center;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.notas
+{
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem; 
+    line-height: 0.1rem;
+}
+
+.altura
+{
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1rem;
+}
