@@ -1,3 +1,14 @@
 {
-    "Restaurants": "Restaurantes"
+    "title": "El aroma mágico",
+    "login": "Inicio de sesión",
+    "username": "Nombre de usuario",
+    "password": "Contraseña",
+    "cancel": "Cancelar",
+    "name": "Nombre",
+    "type": "Tipo",
+    "region": "Región",
+    "accept": "Ingresar",
+    "notes": "Notas",
+    "altitude": "Altitud",
+    "altitude_units": "msnm"
 }

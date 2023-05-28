@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams } from "react-router-dom";
 import {Card} from 'react-bootstrap';
 import './cafe.css';
+import { FormattedMessage } from "react-intl";
+
 
 
 const { useEffect, useState } = require("react");
@@ -9,7 +11,6 @@ const { useEffect, useState } = require("react");
 
 
 function Cafe(props) {
-  const params = useParams();
   const [cafe, setCafe] = useState([]);
   let url = "";
 
@@ -38,9 +39,15 @@ function Cafe(props) {
         <h1 className = "nombreCafe">{cafe.nombre}</h1>
         <p style={{textAlign:"center"}}>{cafe.fecha_cultivo}</p>
         <img className = "cafeImage" src={cafe.imagen} alt={cafe.nombre} />
-        <p className = "notas">Notas</p>
+        <p className = "notas">
+            <FormattedMessage id="notes" />
+        </p>
         <p className = "notas">{cafe.notas}</p>
-        <p className ="altura">Cultivado a una altura de {cafe.altura} msnm</p>
+        <p className ="altura">
+            <FormattedMessage id="altitude" /> 
+            {cafe.altura} 
+            <FormattedMessage id="altitude_units" />
+            </p>
     </div>
   );
 }

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Cafe from '../cafe/cafe';
 import './cafes.css';
 import { Row, Col } from 'react-bootstrap';
+import { FormattedMessage } from "react-intl";
+
 
 function Cafes() {
   const [cafes, setCafes] = useState([]);
@@ -44,17 +46,25 @@ function Cafes() {
 
   return (
     <div>
-      <h1 className="elAromaMagico">El aroma magico</h1>
-      <img src="https://cdn.discordapp.com/attachments/1071192635752071168/1111641106610925648/image.png" />
+      <h1 className="elAromaMagico">
+        <FormattedMessage id="title" />
+      </h1>
+      <img className="cafeImageTitle" src="https://cdn.discordapp.com/attachments/1071192635752071168/1111641106610925648/image.png" />
       <Row>
         <Col>
           <table className="table">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Tipo</th>
-                <th scope="col">Region</th>
+                <th scope="col">
+                  <FormattedMessage id="name" />
+                </th>
+                <th scope="col">
+                  <FormattedMessage id="type" />
+                </th>
+                <th scope="col">
+                  <FormattedMessage id="region" />
+                </th>
               </tr>
             </thead>
             <tbody>

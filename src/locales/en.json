@@ -1,3 +1,15 @@
 {
-    "Restaurants": "Restaurantes"
-}
+    "title": "The Magical Aroma",
+    "login": "Log In",
+    "username": "Username",
+    "password": "Password",
+    "cancel": "Cancel",
+    "name": "Name",
+    "type": "Type",
+    "region": "Region",
+    "accept": "Accept",
+    "notes": "Notes",
+    "altitude": "Altitude",
+    "altitude_units": "mt. above sea level"
+  }
+  

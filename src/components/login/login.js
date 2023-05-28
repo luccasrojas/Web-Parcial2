@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./login.css"; // Archivo CSS personalizado
 import {Row, Col} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { FormattedMessage } from "react-intl";
+
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -41,48 +43,60 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
-      <h1 className = "elAromaMagico">El aroma magico</h1>
-      <img src="https://cdn.discordapp.com/attachments/1071192635752071168/1111641106610925648/image.png"/>
-      <p className = "inicioSesion">Inicio de sesion</p>
-      <div className="loginCard">
-        <div className="card-body">
-          <form onSubmit={handleLoginFormSubmit}>
-            <Row>
-                <div className="input-container">
-                    <Col>
-                    <h3 className = "nombreUsuario">Nombre de usuario</h3> 
-                    <input
-                        type="text"
-                        id="username"
-                        className="campoInput"
-                        value={username}
-                        onChange={handleUsernameChange}
-                    />
-                    </Col>
-                    <Col>
-                    <h3 className="contrasenia">Contraseña</h3> 
-                    <input
-                        id="password"
-                        className="campoInput"
-                        value={password}
-                        onChange={handlePasswordChange}
-                    />
-                    </Col>
-                </div>
-            </Row>
-            <h2></h2>
-            <button type="submit" className="botonIngresar">
-                Ingresar
-            </button>
+<div>
+  <h1 className="elAromaMagico">
+    <FormattedMessage id="title" />
+  </h1>
+  <img className="cafeImageTitle" src="https://cdn.discordapp.com/attachments/1071192635752071168/1111641106610925648/image.png" alt="Café" />
+  <p className="inicioSesion">
+    <FormattedMessage id="login" />
+  </p>
+  <div className="loginCard">
+    <div className="card-body">
+      <form onSubmit={handleLoginFormSubmit}>
+        <Row>
+          <div className="input-container">
+            <Col>
+              <h3 className="nombreUsuario">
+                <FormattedMessage id="username" />
+              </h3>
+              <input
+                type="text"
+                id="username"
+                className="campoInput"
+                value={username}
+                onChange={handleUsernameChange}
+              />
+            </Col>
+            <Col>
+              <h3 className="contrasenia">
+                <FormattedMessage id="password" />
+              </h3>
+              <input
+                type="password"
+                id="password"
+                className="campoInput"
+                value={password}
+                onChange={handlePasswordChange}
+              />
+            </Col>
+          </div>
+        </Row>
+        <h2></h2>
+        <Row>
+        <button type="submit" className="botonIngresar">
+          <FormattedMessage id="accept" />
+        </button>
 
-            <button type="cancel" className="botonCancelar">
-                Cancelar
-            </button>
-          </form>
-        </div>
-      </div>
+        <button type="button" className="botonCancelar">
+          <FormattedMessage id="cancel" />
+        </button>
+        </Row>
+      </form>
     </div>
+  </div>
+</div>
+
   );
 };
 
